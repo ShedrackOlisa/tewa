@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=https://t.me/Olitechgames/202?single">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+    <style>
+        /* CSS for the loading spinner */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .loading-container {
+            text-align: center;
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #007bff;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Simulate loading (remove this script in your actual implementation) -->
+    <script>
+        // Simulate a delay to hide the loading spinner
+        setTimeout(function() {
+            document.querySelector('.loading-container').style.display = 'none';
+        }, 3000); // Adjust the delay as needed
+    </script>
+</body>
+</html>
