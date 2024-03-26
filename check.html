@@ -12,8 +12,6 @@
             background-color: #333;
             color: white;
             padding: 10px;
-            position: relative; /* Add relative positioning */
-            z-index: 1000; /* Add high z-index to ensure it overlays other content */
         }
 
         .navbar-brand {
@@ -25,46 +23,53 @@
             margin: 0;
             padding: 0;
             display: flex;
-            position: absolute; /* Add absolute positioning */
-            top: calc(100% + 10px); /* Position below the navbar */
-            left: 0;
-            background-color: #333; /* Add background color */
-            padding: 10px;
-            flex-direction: column; /* Adjust for vertical layout */
-            width: 200px; /* Set a fixed width */
-            border-radius: 4px; /* Add some border-radius for rounded corners */
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add box-shadow for depth */
-            display: none; /* Hide the menu by default */
-        }
-
-        .navbar-menu.show {
-            display: flex; /* Show the menu when .show class is added */
         }
 
         .navbar-menu li {
-            margin-bottom: 10px; /* Add spacing between menu items */
+            margin-right: 20px;
+        }
+
+        .navbar-menu li:last-child {
+            margin-right: 0;
         }
 
         .hamburger {
-            display: none;
+            /* Adjust the position and z-index of the hamburger button */
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1001; /* Ensure the button appears above the menu */
             background: none;
             border: none;
             color: white;
             font-size: 20px;
             cursor: pointer;
-            position: absolute; /* Add absolute positioning */
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
+        }
+
+        @media (min-width: 768px) {
+            .hamburger {
+                display: none; /* Hide the hamburger button on larger screens */
+            }
         }
 
         @media (max-width: 767px) {
             .navbar-menu {
-                top: calc(100% + 10px);
-                width: 100%;
+                display: none;
+                flex-direction: column; /* Adjust for vertical layout */
+                background-color: #333; /* Add background color */
+                padding: 10px;
+                position: absolute;
+                top: 100%;
                 left: 0;
-                border-radius: 0;
-                box-shadow: none;
+                width: 100%;
+                z-index: 1000; /* Set a high z-index value */
+            }
+            .navbar-menu.show {
+                display: flex;
+            }
+            .navbar-menu.show li {
+                margin-right: 0;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -72,6 +77,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-brand">Your Website</div>
+        <!-- Hamburger button -->
         <button class="hamburger">&#9776;</button>
         <ul class="navbar-menu">
             <li><a href="#">Home</a></li>
