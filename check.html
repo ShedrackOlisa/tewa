@@ -82,21 +82,23 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-brand">BMD MEDIA</div>
-        <!-- Hamburger button -->
-        <button class="hamburger">&#9776;</button>
-        <ul class="navbar-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Catalogues</a></li>
-            <li><a href="#">Happy clients</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQs</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">BMD MEDIA</div>
+            <!-- Hamburger button -->
+            <button class="hamburger">&#9776;</button>
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Catalogues</a></li>
+                <li><a href="#">Happy clients</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -105,6 +107,7 @@
 
             hamburger.addEventListener('click', function () {
                 navbarMenu.classList.toggle('show');
+                hamburger.classList.toggle('open');
             });
         });
     </script>
