@@ -4,7 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Hamburger Menu</title>
-    
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar-menu li {
+            margin-right: 20px;
+        }
+
+        .navbar-menu li:last-child {
+            margin-right: 0;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-menu {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .navbar-menu.show {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #333;
+                width: 100%;
+                padding: 10px;
+            }
+            .navbar-menu.show li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -17,78 +77,16 @@
         </ul>
         <button class="hamburger">&#9776;</button>
     </nav>
-   
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navbarMenu = document.querySelector('.navbar-menu');
 
-
-
-
-<style>
-    .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-
-.navbar-brand {
-    font-weight: bold;
-}
-
-.navbar-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navbar-menu li {
-    margin-right: 20px;
-}
-
-.navbar-menu li:last-child {
-    margin-right: 0;
-}
-
-.hamburger {
-    display: none; /* Initially hide the hamburger menu */
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Media query for mobile devices */
-@media (max-width: 767px) {
-    .navbar-menu {
-        display: none; /* Hide the menu items on smaller screens */
-    }
-    .hamburger {
-        display: block; /* Show the hamburger menu button */
-    }
-}
-
-</style>
-
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navbarMenu = document.querySelector('.navbar-menu');
-
-    // Toggle the visibility of the menu when the hamburger icon is clicked
-    hamburger.addEventListener('click', function () {
-        navbarMenu.classList.toggle('show');
-    });
-});
-
-</script>
-
-
+            hamburger.addEventListener('click', function () {
+                navbarMenu.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
