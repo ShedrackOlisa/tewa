@@ -60,6 +60,18 @@
             cursor: pointer;
         }
 
+        .hamburger.open .line {
+            transform: rotate(45deg);
+        }
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+            transition: transform 0.3s ease;
+        }
+
         @media (min-width: 768px) {
             .hamburger {
                 display: none; /* Hide the hamburger button on larger screens */
@@ -86,7 +98,11 @@
         <nav class="navbar">
             <div class="navbar-brand">BMD MEDIA</div>
             <!-- Hamburger button -->
-            <button class="hamburger">&#9776;</button>
+            <button class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
             <ul class="navbar-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
