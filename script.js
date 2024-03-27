@@ -37,3 +37,40 @@ function currentSlide(n) {
 }
 
 
+
+
+var container = document.querySelector('.container');
+
+// Define images and their corresponding text
+var images = [
+  'https://shedrackolisa.github.io/tewa/image1.jpg',
+  'https://shedrackolisa.github.io/tewa/image2.jpg',
+  'https://shedrackolisa.github.io/tewa/image3.jpg',
+  'https://shedrackolisa.github.io/tewa/image4.jpg',
+  'https://shedrackolisa.github.io/tewa/image5.jpg'
+];
+var texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4', 'Text 5'];
+
+// Load and draw images with text
+function loadImages() {
+  images.forEach(function(image, index) {
+    var canvas = document.createElement('canvas');
+    canvas.width = 300; // Set canvas width
+    canvas.height = 200; // Set canvas height
+    var ctx = canvas.getContext('2d');
+    var img = new Image();
+    img.onload = function() {
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'white';
+      ctx.font = '16px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(texts[index], canvas.width / 2, canvas.height - 20);
+    };
+    img.src = image;
+    container.appendChild(canvas);
+  });
+}
+
+// Start loading images
+loadImages();
+
