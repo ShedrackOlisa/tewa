@@ -1,0 +1,203 @@
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Optional: Add styling for navigation arrows */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* Optional: Add a black background color to the active dot/circle */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+  }
+
+  header{
+    background: #333;
+    background-color: #333;
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    padding: 0%;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: azure;
+}
+ .navbar {
+     position: relative; /* Ensure proper positioning of menu and hamburger button */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #333;
+     color: white;
+     padding: 10px;
+    
+ }
+
+ .navbar-brand {
+     font-weight: bold;
+ }
+
+ .navbar-menu {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     position: absolute; /* Position the menu absolutely */
+     top: 100%; /* Position it below the navbar */
+     right: 0; /* Align it to the right */
+     background-color: #333; /* Add background color */
+     flex-direction: column; /* Adjust for vertical layout */
+     padding: 10px;
+     width: 200px; /* Set a fixed width */
+     z-index: 1000; /* Ensure the menu appears above other content */
+     display: none; /* Hide the menu by default */
+    
+ }
+
+ .navbar-menu.show {
+     display: flex; /* Show the menu when .show class is added */
+ }
+
+ .navbar-menu li {
+     margin-bottom: 10px; /* Add spacing between menu items */
+ }
+
+ .hamburger {
+     position: absolute; /* Position the hamburger button */
+     top: 8px; /* Adjust top position */
+     right: 15px; /* Align it to the right */
+     background: none;
+     border: none;
+     color: white;
+     font-size: 20px;
+     cursor: pointer;
+ }
+
+ .hamburger.open .line {
+     transform: rotate(45deg);
+ }
+
+ .line {
+     width: 25px;
+     height: 3px;
+     background-color: white;
+     margin: 5px;
+     transition: transform 0.3s ease;
+ }
+
+ @media (min-width: 768px) {
+     .hamburger {
+         display: none; /* Hide the hamburger button on larger screens */
+     }
+     .navbar-menu {
+         position: static; /* Reset position for larger screens */
+         display: flex; /* Ensure the menu is visible */
+         background-color: transparent; /* Set background color to transparent */
+         flex-direction: row; /* Adjust for horizontal layout */
+         width: auto; /* Allow the menu to expand */
+     }
+     .navbar-menu li {
+         margin-right: 20px; /* Add spacing between menu items on desktop */
+         margin-bottom: 0; /* Remove margin bottom */
+     }
+     .navbar-menu li:last-child {
+         margin-right: 0; /* Remove right margin for the last item */
+     }
+ }
+
+ section{
+width: 95%;
+margin:auto;
+overflow: hidden;
+font-size:13px;
+text-align:
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    hamburger.addEventListener('click', function () {
+        navbarMenu.classList.toggle('show');
+        hamburger.classList.toggle('open');
+    });
+});
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  canvas {
+    margin: 10px;
+    border: 1px solid black;
+  }
+  @media only screen and (min-width: 768px) {
+    .container {
+      justify-content: space-between;
+    }
+  }
+
