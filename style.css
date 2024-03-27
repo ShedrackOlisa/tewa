@@ -1,80 +1,4 @@
-.slideshow-container {
-    max-width: 800px;
-    position: relative;
-    margin: auto;
-  }
 
-  .mySlides {
-    display: none;
-  }
-
-  .mySlides img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Optional: Add styling for navigation arrows */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* Optional: Add a black background color to the active dot/circle */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
-  @keyframes fade {
-    from {
-      opacity: .4
-    }
-    to {
-      opacity: 1
-    }
-  }
-
-  header{
-    background: #333;
-    background-color: #333;
-    width: 100%;
-}
-
-body{
-    width: 100%;
-    padding: 0%;
-}
 
 .navbar a{
     text-decoration: none;
@@ -172,32 +96,74 @@ text-align:
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navbarMenu = document.querySelector('.navbar-menu');
 
-    hamburger.addEventListener('click', function () {
-        navbarMenu.classList.toggle('show');
-        hamburger.classList.toggle('open');
-    });
-});
 
-body {
-    margin: 0;
-    padding: 0;
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
   }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+  .mySlides {
+    display: none;
   }
-  canvas {
-    margin: 10px;
-    border: 1px solid black;
+
+  .mySlides img {
+    width: 100%;
+    height: auto;
   }
-  @media only screen and (min-width: 768px) {
-    .container {
-      justify-content: space-between;
+
+  /* Optional: Add styling for navigation arrows */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* Optional: Add a black background color to the active dot/circle */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
     }
   }
+
+
 
