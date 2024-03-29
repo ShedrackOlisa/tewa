@@ -41,22 +41,34 @@ function currentSlide(n) {
 
 var container = document.querySelector('.container');
 
-// Define images and their corresponding text
+// Define images, their corresponding text, and URLs
 var images = [
-  'https://shedrackolisa.github.io/tewa/image6.jpg',
-  'https://shedrackolisa.github.io/tewa/image7.jpg',
-  'https://shedrackolisa.github.io/tewa/image8.jpg',
-  'https://shedrackolisa.github.io/tewa/image9.jpg',
-  'https://shedrackolisa.github.io/tewa/image10.jpg',
   'https://shedrackolisa.github.io/tewa/image11.jpg',
+  'https://shedrackolisa.github.io/tewa/image7.jpg',
+  'https://blog.adobe.com/en/publish/2021/10/06/media_119f04ee63397f5cf611718dbed817cef69b42f58.jpg',
+  'https://smallbiztrends.com/ezoimgfmt/media.smallbiztrends.com/2023/02/Photography-Equipment-You-Need-to-Start-a-Photo-Business-in-2023-5.png?ezimgfmt=rs:808x456/rscb12/ngcb12/notWebP',
+  'https://shedrackolisa.github.io/tewa/image10.jpg',
+  'https://www.kw-photography.co.uk/wp-content/uploads/2021/06/Is-baby-photography-worth-it-1536x1024.jpg',
   'https://shedrackolisa.github.io/tewa/image12.jpg',
   'https://shedrackolisa.github.io/tewa/image13.jpg',
   'https://shedrackolisa.github.io/tewa/image14.jpg'
-  
 ];
-var texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4', 'Text 5', 'Text 6', 'Text 7', 'Text 8', 'Text 9'];
 
-// Load and draw images with text
+var texts = ['WEDDING PHOTOGRAPHY', 'REAL ESTATE PHOTOGRAPHY', 'DRONE PHOTOGRAPHY', 'STUDIO PHOTOGRAPHY', 'FAMILY PHOTOGRAPHY', 'NEWBORN PHOTOGRAPHY', 'COMMERICIAL PHOTOGRAPHY', 'EVENTS PHOTOGRAPHY', 'KIDS PHOTOGRAPHY'];
+
+var urls = [
+  'https://ziphy.com.ng/',
+  'https://example.com/2',
+  'https://example.com/3',
+  'https://example.com/4',
+  'https://example.com/5',
+  'https://example.com/6',
+  'https://example.com/7',
+  'https://example.com/8',
+  'https://example.com/9'
+];
+
+// Load and display images with text and URLs
 function loadImages() {
   images.forEach(function(image, index) {
     var canvas = document.createElement('canvas');
@@ -72,10 +84,12 @@ function loadImages() {
       ctx.fillText(texts[index], canvas.width / 2, canvas.height - 20);
     };
     img.src = image;
-    container.appendChild(canvas);
+    var link = document.createElement('a');
+    link.href = urls[index]; // Set the URL for each image
+    link.appendChild(canvas);
+    container.appendChild(link);
   });
 }
 
-// Start loading images
+// Display images
 loadImages();
-
