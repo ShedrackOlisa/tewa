@@ -60,7 +60,7 @@ var texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4', 'Text 5', 'Text 6', 'Text 7
 function loadImages() {
   images.forEach(function(image, index) {
     var canvas = document.createElement('canvas');
-    canvas.width = 400; // Set canvas width
+    canvas.width = 380; // Set canvas width
     canvas.height = 330; // Set canvas height
     var ctx = canvas.getContext('2d');
     var img = new Image();
@@ -78,6 +78,4 @@ function loadImages() {
 
 // Start loading images
 loadImages();
-
-
 
