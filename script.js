@@ -43,20 +43,25 @@ var container = document.querySelector('.container');
 
 // Define images and their corresponding text
 var images = [
-  'https://shedrackolisa.github.io/tewa/image1.jpg',
-  'https://shedrackolisa.github.io/tewa/image2.jpg',
-  'https://shedrackolisa.github.io/tewa/image3.jpg',
-  'https://shedrackolisa.github.io/tewa/image4.jpg',
-  'https://shedrackolisa.github.io/tewa/image5.jpg'
+  'https://shedrackolisa.github.io/tewa/image6.jpg',
+  'https://shedrackolisa.github.io/tewa/image7.jpg',
+  'https://shedrackolisa.github.io/tewa/image8.jpg',
+  'https://shedrackolisa.github.io/tewa/image9.jpg',
+  'https://shedrackolisa.github.io/tewa/image10.jpg',
+  'https://shedrackolisa.github.io/tewa/image11.jpg',
+  'https://shedrackolisa.github.io/tewa/image12.jpg',
+  'https://shedrackolisa.github.io/tewa/image13.jpg',
+  'https://shedrackolisa.github.io/tewa/image14.jpg'
+  
 ];
-var texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4', 'Text 5'];
+var texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4', 'Text 5', 'Text 6', 'Text 7', 'Text 8', 'Text 9'];
 
 // Load and draw images with text
 function loadImages() {
   images.forEach(function(image, index) {
     var canvas = document.createElement('canvas');
-    canvas.width = 300; // Set canvas width
-    canvas.height = 200; // Set canvas height
+    canvas.width = 400; // Set canvas width
+    canvas.height = 330; // Set canvas height
     var ctx = canvas.getContext('2d');
     var img = new Image();
     img.onload = function() {
@@ -73,4 +78,6 @@ function loadImages() {
 
 // Start loading images
 loadImages();
+
+
 
